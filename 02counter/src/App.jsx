@@ -8,24 +8,24 @@ function App() {
   let [counter, setCounter] = useState(15);
   // let counter = 15
 
-  // const addValue = () => {
-  //   if (counter < 20) {
-  //     counter = counter + 1;
-  //     setCounter(counter);
-  //     console.log("Value Added: ",counter);
-  //   }
-  //   else {
-  //     alert("Counter cannot exceed 20");
-  //   }
-  // }
-
-  //Interview Question on counter
   const addValue = () => {
-    setCounter(counter + 1);
-    setCounter(counter + 1);
-    setCounter(counter + 1);
-    setCounter(counter + 1);
-  }// what will be the value of counter if we click on AddValue button once? Ans: 16
+    if (counter < 20) {
+      counter = counter + 1;
+      setCounter(counter => counter + 1);
+      console.log("Value Added: ",counter);
+    }
+    else {
+      alert("Counter cannot exceed 20");
+    }
+  }
+
+  // //Interview Question on counter
+  // const addValue = () => {
+  //   setCounter(counter + 1);
+  //   setCounter(counter + 1);
+  //   setCounter(counter + 1);
+  //   setCounter(counter + 1);
+  // }// what will be the value of counter if we click on AddValue button once? Ans: 16
 
   /*
     setCounter((prevCounter) => prevCounter + 1);
